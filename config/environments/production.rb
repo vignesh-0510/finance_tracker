@@ -110,4 +110,5 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   config.hosts << "61be56510d3347209f6d4873ef61c789.vfs.cloud9.us-east-1.amazonaws.com"
+  config.hosts << "finance-tracker-vignesh.herokuapp.com"
 end
