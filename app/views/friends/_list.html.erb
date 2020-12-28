@@ -1,22 +1,22 @@
 <% if !@friends.empty? %>
   <div class="row">
     <div class="col-12 col-md-9">
-      <table class="table table-bordered table-hover">
-        <thead>
+      <table class="table table-bordered table-hover table-striped">
+        <thead class='thead-dark'>
           <tr>
             <th scope="col">Name</th>
-            <th scope="col">e-mail</th>
+            <th scope="col">E-mail</th>
             <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
-          <% @friends.each do |friend|%>
+          <% @friends.each do |friend| %>
             <tr>
               <td><%= "#{friend.first_name} #{friend.last_name}" %></td>
               <td><%= friend.email %></td>
               <td class="text-center">
-                <%=link_to "View Profile", user_path(friend), class:"btn btn-outline-info btn-sm" %>
-                <%=link_to "Unfollow", friendship_path(friend), method: :delete, data: {confirm: "Are you sure yo want to untrack this stock?"}, class:"btn btn-outline-warning btn-sm" %>
+                <%= link_to "View Profile", user_path(friend), class:"btn btn-outline-info btn-sm" %>
+                <%= link_to "Unfollow", friendship_path(friend), method: :delete, data: {confirm: "Are you sure yo want to untrack this stock?"}, class:"btn btn-outline-warning btn-sm" %>
               </td>
             </tr>
           <% end %>
